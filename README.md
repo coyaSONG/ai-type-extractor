@@ -19,15 +19,15 @@ Next.js 기반의 비정형 데이터를 구조화된 JSON으로 변환하는 AP
 ## API 사용법
 
 `/api/json`에 POST 요청:
-json
-`
+
+```
 {
 "data": "변환할 텍스트",
 "format": {
 // 원하는 JSON 스키마
 }
 }
-`
+```
 ## 기술 스택
 
 - Next.js 14.2.4
