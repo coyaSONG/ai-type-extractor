@@ -1,4 +1,4 @@
-import { openai } from "@/app/lib/openai";
+import { getOpenAI } from "@/app/lib/openai";
 import { NextRequest, NextResponse } from "next/server";
 import { z, ZodTypeAny } from "zod";
 import { EXAMPLE_ANSWER, EXAMPLE_PROMPT } from "./example";
@@ -52,6 +52,7 @@ export const POST = async (req: NextRequest) => {
   });
 
   const { data, format } = genericSchema.parse(body);
+  const openai = getOpenAI();
 
   // step 2: create a schema from the expected user format
   const dynamicSchema = jsonSchemaToZod(format);
