@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^16.2.10",
+    "next": "^16.3.4",
     "openai": "^4.52.3",
     "react": "^19",
     "react-dom": "^19.2.7",
